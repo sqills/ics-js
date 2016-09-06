@@ -87,6 +87,13 @@ export default class Component {
      * @type {Component[]}
      */
     this.internalComponents = []
+
+    /** Issue IE10 fail #22
+     *
+     * binding of this in the constructor
+     */
+
+    this.addProp = this.addProp.bind(this)
   }
 
   /**
